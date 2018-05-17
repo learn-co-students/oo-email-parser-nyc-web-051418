@@ -14,16 +14,8 @@ class EmailParser
     end
 
     def parse
-        @email.split(/[\s,]+/).map{|address| address.strip}.flatten.uniq
+        @email.split(/[\s,]+/).uniq
     end
 
-end
 
-# def parse
-#     email_array = @email.split(/[\s,]+/)
-#
-#     final_array = email_array.map! do |address|
-#         address.strip
-#     end
-#     final_array.flatten.uniq
-# end
+end
